@@ -46,7 +46,7 @@ public class UserRegister extends HttpServlet {
         	query.setParameter("email", email);
     		List<User> res = query.getResultList();
     		if (res.size() != 0){
-                 out.println("<b>User with the given email already exits!!!</b><br>");
+                 out.println("<b>User with the given email already exists!!!</b><br>");
             }else {
                 session.save(user);
                 out.println("<b>Successfully registered the user</b><br>");
